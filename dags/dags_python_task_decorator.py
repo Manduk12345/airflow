@@ -8,6 +8,7 @@ with DAG(
     start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
+    
     @task(task_id="python_task_1")
     def print_context(some_input):
         print(some_input)
